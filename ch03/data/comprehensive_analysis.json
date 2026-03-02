@@ -1,0 +1,367 @@
+{
+  "analysis_date": "2025-12-30T21:07:19.191328",
+  "scenario": {
+    "company": "스타트업 A사",
+    "industry": "B2B SaaS (고객관계관리 솔루션)",
+    "situation": {
+      "description": "지난 2분기 연속 매출 성장률이 전년 대비 50% 하락",
+      "metrics": {
+        "revenue_growth_yoy": {
+          "Q1_2024": "45%",
+          "Q2_2024": "42%",
+          "Q3_2024": "22%",
+          "Q4_2024": "20%"
+        },
+        "customer_acquisition_cost": {
+          "trend": "증가",
+          "change": "+35%"
+        },
+        "churn_rate": {
+          "current": "8%",
+          "industry_avg": "5%"
+        },
+        "nps_score": {
+          "current": 32,
+          "previous": 45
+        }
+      },
+      "context": [
+        "시장에 대형 경쟁사 2곳 신규 진입",
+        "핵심 기능의 기술 부채 누적",
+        "영업팀 핵심 인력 3명 이직",
+        "가격 인상 후 고객 불만 증가"
+      ]
+    }
+  },
+  "why_tree": {
+    "root": "왜 성장이 둔화되었는가?",
+    "type": "why",
+    "branches": [
+      {
+        "name": "1. 매출 성장 둔화",
+        "level": 1,
+        "children": [
+          {
+            "name": "1.1 신규 고객 획득 감소",
+            "level": 2,
+            "children": [
+              {
+                "name": "1.1.1 마케팅 효율 저하 (CAC +35%)",
+                "level": 3,
+                "evidence": "CAC 상승"
+              },
+              {
+                "name": "1.1.2 경쟁 심화 (대형 2사 진입)",
+                "level": 3,
+                "evidence": "시장 분석"
+              },
+              {
+                "name": "1.1.3 영업력 약화 (핵심인력 이탈)",
+                "level": 3,
+                "evidence": "인사 기록"
+              }
+            ]
+          },
+          {
+            "name": "1.2 기존 고객 매출 정체",
+            "level": 2,
+            "children": [
+              {
+                "name": "1.2.1 업셀링/크로스셀링 부진",
+                "level": 3,
+                "evidence": "매출 분석"
+              },
+              {
+                "name": "1.2.2 고객 이탈 증가 (8% vs 업계 5%)",
+                "level": 3,
+                "evidence": "이탈률 데이터"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2. 제품 경쟁력 약화",
+        "level": 1,
+        "children": [
+          {
+            "name": "2.1 기능 경쟁력 저하",
+            "level": 2,
+            "children": [
+              {
+                "name": "2.1.1 기술 부채로 신기능 출시 지연",
+                "level": 3,
+                "evidence": "개발 로드맵"
+              },
+              {
+                "name": "2.1.2 경쟁사 대비 기능 격차 발생",
+                "level": 3,
+                "evidence": "경쟁 분석"
+              }
+            ]
+          },
+          {
+            "name": "2.2 고객 만족도 하락",
+            "level": 2,
+            "children": [
+              {
+                "name": "2.2.1 NPS 하락 (32 ← 45)",
+                "level": 3,
+                "evidence": "NPS 조사"
+              },
+              {
+                "name": "2.2.2 가격 인상 후 불만 증가",
+                "level": 3,
+                "evidence": "CS 데이터"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "mece_validation": {
+      "mutually_exclusive": true,
+      "collectively_exhaustive": true,
+      "notes": "성장 둔화를 '매출 측면'과 '제품 측면'으로 분해. 상호 배타적이며 성장에 영향을 미치는 주요 요인을 포괄."
+    }
+  },
+  "how_tree": {
+    "root": "어떻게 성장을 회복할 것인가?",
+    "type": "how",
+    "branches": [
+      {
+        "name": "1. 신규 고객 획득 강화",
+        "level": 1,
+        "priority": "High",
+        "children": [
+          {
+            "name": "1.1 마케팅 효율화",
+            "level": 2,
+            "children": [
+              {
+                "name": "1.1.1 타겟 세그먼트 재정의",
+                "level": 3,
+                "effort": "Medium",
+                "impact": "High"
+              },
+              {
+                "name": "1.1.2 콘텐츠 마케팅 강화",
+                "level": 3,
+                "effort": "Low",
+                "impact": "Medium"
+              },
+              {
+                "name": "1.1.3 파트너십 채널 확대",
+                "level": 3,
+                "effort": "High",
+                "impact": "High"
+              }
+            ]
+          },
+          {
+            "name": "1.2 영업 역량 재구축",
+            "level": 2,
+            "children": [
+              {
+                "name": "1.2.1 핵심 영업 인력 채용",
+                "level": 3,
+                "effort": "High",
+                "impact": "High"
+              },
+              {
+                "name": "1.2.2 영업 프로세스 표준화",
+                "level": 3,
+                "effort": "Medium",
+                "impact": "Medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2. 고객 유지율 개선",
+        "level": 1,
+        "priority": "Critical",
+        "children": [
+          {
+            "name": "2.1 고객 성공 프로그램",
+            "level": 2,
+            "children": [
+              {
+                "name": "2.1.1 온보딩 프로세스 개선",
+                "level": 3,
+                "effort": "Medium",
+                "impact": "High"
+              },
+              {
+                "name": "2.1.2 정기 비즈니스 리뷰 도입",
+                "level": 3,
+                "effort": "Low",
+                "impact": "Medium"
+              }
+            ]
+          },
+          {
+            "name": "2.2 가격 정책 재검토",
+            "level": 2,
+            "children": [
+              {
+                "name": "2.2.1 사용량 기반 요금제 도입",
+                "level": 3,
+                "effort": "High",
+                "impact": "Medium"
+              },
+              {
+                "name": "2.2.2 장기 고객 혜택 강화",
+                "level": 3,
+                "effort": "Low",
+                "impact": "Medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "3. 제품 경쟁력 강화",
+        "level": 1,
+        "priority": "High",
+        "children": [
+          {
+            "name": "3.1 기술 부채 해소",
+            "level": 2,
+            "children": [
+              {
+                "name": "3.1.1 코어 아키텍처 리팩토링",
+                "level": 3,
+                "effort": "High",
+                "impact": "High"
+              },
+              {
+                "name": "3.1.2 테스트 자동화 강화",
+                "level": 3,
+                "effort": "Medium",
+                "impact": "Medium"
+              }
+            ]
+          },
+          {
+            "name": "3.2 차별화 기능 개발",
+            "level": 2,
+            "children": [
+              {
+                "name": "3.2.1 AI 기반 인사이트 기능",
+                "level": 3,
+                "effort": "High",
+                "impact": "High"
+              },
+              {
+                "name": "3.2.2 통합 대시보드 개선",
+                "level": 3,
+                "effort": "Medium",
+                "impact": "Medium"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "mece_validation": {
+      "mutually_exclusive": true,
+      "collectively_exhaustive": true,
+      "notes": "성장 회복을 '고객 획득', '고객 유지', '제품 강화'로 분해. 고객 생애주기와 제품 관점에서 포괄적 커버."
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "hypothesis": "고객 이탈의 주원인은 가격 인상이 아니라 제품 안정성 문제이다",
+      "reasoning": "NPS 하락 시기와 기술 부채 이슈 보고 시기가 일치",
+      "validation_method": "이탈 고객 심층 인터뷰 및 CS 티켓 분석",
+      "data_needed": [
+        "이탈 고객 설문",
+        "CS 티켓 분류 데이터",
+        "버그 리포트 트렌드"
+      ],
+      "priority": 1,
+      "effort": "Medium",
+      "impact": "High"
+    },
+    {
+      "id": "H2",
+      "hypothesis": "신규 고객 획득 비용 상승은 타겟 세그먼트 분산이 원인이다",
+      "reasoning": "CAC 상승과 함께 리드 품질 지표도 하락",
+      "validation_method": "세그먼트별 CAC 및 전환율 분석",
+      "data_needed": [
+        "마케팅 채널별 CAC",
+        "세그먼트별 전환율",
+        "리드 소스 분석"
+      ],
+      "priority": 2,
+      "effort": "Low",
+      "impact": "High"
+    },
+    {
+      "id": "H3",
+      "hypothesis": "영업 인력 이탈이 특정 고객 세그먼트 매출 하락의 직접 원인이다",
+      "reasoning": "이탈 영업인력이 담당했던 고객군에서 이탈률이 특히 높음",
+      "validation_method": "고객-영업담당자 매핑 및 이탈률 상관분석",
+      "data_needed": [
+        "고객별 담당자 이력",
+        "세그먼트별 이탈률",
+        "담당자 변경 시점"
+      ],
+      "priority": 3,
+      "effort": "Medium",
+      "impact": "Medium"
+    }
+  ],
+  "pyramid_summary": {
+    "scqa": {
+      "situation": "스타트업 A사는 B2B SaaS 시장에서 빠르게 성장해온 CRM 솔루션 기업이다.",
+      "complication": "최근 2분기 연속 성장률이 절반으로 하락했으며, 대형 경쟁사 진입과 핵심 인력 이탈이 동시에 발생했다.",
+      "question": "어떻게 성장 모멘텀을 회복할 수 있는가?",
+      "answer": "고객 유지율 개선을 최우선으로, 제품 안정성 확보와 타겟 마케팅 집중을 병행해야 한다."
+    },
+    "key_message": "성장 회복의 핵심은 신규 획득보다 기존 고객 유지이다",
+    "supporting_arguments": [
+      {
+        "argument": "1. 고객 이탈률(8%)이 업계 평균(5%)보다 높아 즉각 대응 필요",
+        "evidence": [
+          "이탈 고객 1명 대체에 신규 획득 비용의 5배 소요",
+          "NPS 13점 하락은 심각한 만족도 문제 시사"
+        ]
+      },
+      {
+        "argument": "2. 기술 부채 해소 없이는 경쟁사 대비 기능 격차 확대 불가피",
+        "evidence": [
+          "신기능 출시 주기가 경쟁사 대비 2배 느림",
+          "버그 관련 CS 문의가 전체의 35% 차지"
+        ]
+      },
+      {
+        "argument": "3. CAC 효율화를 위해 타겟 세그먼트 집중 필요",
+        "evidence": [
+          "상위 20% 세그먼트가 매출의 65% 기여",
+          "분산된 마케팅으로 리드 품질 20% 하락"
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": 1,
+        "action": "고객 성공팀 강화 및 온보딩 프로세스 전면 개선",
+        "timeline": "즉시"
+      },
+      {
+        "priority": 2,
+        "action": "기술 부채 해소를 위한 2개월 집중 스프린트",
+        "timeline": "1개월 내 착수"
+      },
+      {
+        "priority": 3,
+        "action": "핵심 세그먼트 재정의 및 마케팅 리소스 집중",
+        "timeline": "2개월 내"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+# AI 증강 기획 실습 의존성
+# Python 3.10+
+
+# 핵심 라이브러리
+numpy>=1.24.0
+pandas>=2.0.0
+
+# LLM API 클라이언트
+openai>=1.0.0
+anthropic>=0.18.0
+
+# 데이터 처리
+python-dotenv>=1.0.0
+
+# 시각화 (선택)
+matplotlib>=3.7.0

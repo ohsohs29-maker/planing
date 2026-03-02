@@ -1,0 +1,8 @@
+# 제4장 실습 코드 의존성
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+plotly>=5.15.0
+networkx>=3.1
+openai>=1.0.0
+anthropic>=0.20.0

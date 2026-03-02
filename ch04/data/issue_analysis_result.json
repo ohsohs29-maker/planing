@@ -1,0 +1,180 @@
+{
+  "analysis_summary": {
+    "total_issues": 5,
+    "by_priority": {
+      "high": 4,
+      "medium": 1,
+      "low": 0
+    },
+    "by_category": {
+      "운영": 1,
+      "조직": 2,
+      "기술": 1,
+      "전략": 1
+    }
+  },
+  "issues": [
+    {
+      "id": "I01",
+      "question": "디지털 전환 투자에 대한 ROI를 어떻게 보장할 수 있는가?",
+      "perspective": "CEO",
+      "category": "전략",
+      "priority": "high",
+      "sub_issues": [
+        "단계별 투자 규모를 어떻게 결정할 것인가?",
+        "경쟁사 대비 적정 투자 수준은 얼마인가?"
+      ]
+    },
+    {
+      "id": "I02",
+      "question": "기존 생산 라인을 중단하지 않으면서 어떻게 스마트 팩토리를 구현할 것인가?",
+      "perspective": "생산부문",
+      "category": "운영",
+      "priority": "high",
+      "sub_issues": [
+        "시범 라인 선정 기준은 무엇인가?",
+        "생산성 저하 없이 전환하는 방법은?"
+      ]
+    },
+    {
+      "id": "I03",
+      "question": "레거시 시스템과 신규 시스템의 통합을 어떻게 진행할 것인가?",
+      "perspective": "IT부문",
+      "category": "기술",
+      "priority": "high",
+      "sub_issues": [
+        "데이터 마이그레이션 전략은?",
+        "시스템 다운타임을 최소화하는 방법은?"
+      ]
+    },
+    {
+      "id": "I04",
+      "question": "디지털 채널 전환 시 기존 영업 조직의 역할을 어떻게 재정의할 것인가?",
+      "perspective": "영업부문",
+      "category": "조직",
+      "priority": "medium",
+      "sub_issues": [
+        "온-오프라인 채널 갈등을 어떻게 해소할 것인가?",
+        "영업 인센티브 체계를 어떻게 변경할 것인가?"
+      ]
+    },
+    {
+      "id": "I05",
+      "question": "자동화로 인한 고용 불안을 어떻게 해소할 것인가?",
+      "perspective": "노조",
+      "category": "조직",
+      "priority": "high",
+      "sub_issues": [
+        "재배치 대상 인원에 대한 재교육 방안은?",
+        "고용 보장 기간은 얼마로 할 것인가?"
+      ]
+    }
+  ],
+  "mece_check": {
+    "is_mece": false,
+    "overlapping_issues": [
+      [
+        "I03",
+        "I02",
+        "시스템 통합과 스마트 팩토리 구현이 기술적으로 연결됨"
+      ]
+    ],
+    "missing_areas": [
+      "재무: 디지털 전환 자금 조달 방안",
+      "법무/컴플라이언스: 데이터 보안 및 규제 준수",
+      "외부 이해관계자: 고객 경험 관점의 이슈"
+    ],
+    "suggestions": [
+      "I02와 I03를 '기술 인프라' 범주로 통합하고 하위 이슈로 분리",
+      "재무 관점의 이슈 추가 (자금 조달, 비용 통제)",
+      "고객 관점의 이슈 추가 (디지털 서비스 기대)"
+    ]
+  },
+  "issue_tree": {
+    "root": "중견 제조기업 B사의 디지털 전환 전략 수립",
+    "branches": [
+      {
+        "category": "전략",
+        "issues": [
+          {
+            "id": "I01",
+            "question": "디지털 전환 투자에 대한 ROI를 어떻게 보장할 수 있는가?",
+            "perspective": "CEO",
+            "category": "전략",
+            "priority": "high",
+            "sub_issues": [
+              "단계별 투자 규모를 어떻게 결정할 것인가?",
+              "경쟁사 대비 적정 투자 수준은 얼마인가?"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "운영",
+        "issues": [
+          {
+            "id": "I02",
+            "question": "기존 생산 라인을 중단하지 않으면서 어떻게 스마트 팩토리를 구현할 것인가?",
+            "perspective": "생산부문",
+            "category": "운영",
+            "priority": "high",
+            "sub_issues": [
+              "시범 라인 선정 기준은 무엇인가?",
+              "생산성 저하 없이 전환하는 방법은?"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "기술",
+        "issues": [
+          {
+            "id": "I03",
+            "question": "레거시 시스템과 신규 시스템의 통합을 어떻게 진행할 것인가?",
+            "perspective": "IT부문",
+            "category": "기술",
+            "priority": "high",
+            "sub_issues": [
+              "데이터 마이그레이션 전략은?",
+              "시스템 다운타임을 최소화하는 방법은?"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "조직",
+        "issues": [
+          {
+            "id": "I04",
+            "question": "디지털 채널 전환 시 기존 영업 조직의 역할을 어떻게 재정의할 것인가?",
+            "perspective": "영업부문",
+            "category": "조직",
+            "priority": "medium",
+            "sub_issues": [
+              "온-오프라인 채널 갈등을 어떻게 해소할 것인가?",
+              "영업 인센티브 체계를 어떻게 변경할 것인가?"
+            ]
+          },
+          {
+            "id": "I05",
+            "question": "자동화로 인한 고용 불안을 어떻게 해소할 것인가?",
+            "perspective": "노조",
+            "category": "조직",
+            "priority": "high",
+            "sub_issues": [
+              "재배치 대상 인원에 대한 재교육 방안은?",
+              "고용 보장 기간은 얼마로 할 것인가?"
+            ]
+          }
+        ]
+      }
+    ],
+    "total_issues": 5,
+    "categories": [
+      "전략",
+      "운영",
+      "기술",
+      "조직"
+    ]
+  }
+}

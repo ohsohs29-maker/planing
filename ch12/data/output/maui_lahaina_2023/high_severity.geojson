@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "high_severity",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::32604" } },
+"features": [
+
+]
+}

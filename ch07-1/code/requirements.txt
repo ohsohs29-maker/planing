@@ -1,0 +1,18 @@
+# 제7장 AI 기반 환경 스캐닝 실습 환경
+
+# 핵심 라이브러리
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+seaborn>=0.12
+
+# 웹 크롤링/API
+requests>=2.28
+
+# 선택: 실제 API 연동 시
+# newsapi-python>=0.2.7  # NewsAPI
+# google-api-python-client>=2.0  # Google APIs
+
+# 선택: 자연어 처리
+# transformers>=4.30  # 감성 분석
+# konlpy>=0.6  # 한국어 형태소 분석
