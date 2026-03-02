@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Dev\\\\planing\\\\_check_path.ps1\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Dev\\\\planing\\\\_check_alias.ps1\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Dev\\\\planing\\\\_fix_path.ps1\")",
+      "Bash(cmd.exe //c \"where python\")",
+      "Bash(cmd.exe //c \"echo %PATH%\")",
+      "Bash(tr ';' '\\\\n')",
+      "Bash(cmd.exe //c \"C:\\\\Users\\\\user\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe --version\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Dev\\\\planing\\\\_fix_path2.ps1\")",
+      "Bash(/c/Dev/planing/.venv/Scripts/python.exe -m pip install nbformat -q)"
+    ]
+  }
+}
