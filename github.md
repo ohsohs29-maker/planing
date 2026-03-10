@@ -9,11 +9,6 @@
 
 **Windows**: https://git-scm.com/download/win → 다운로드 후 설치 (기본값 OK)
 
-**macOS**: 터미널에서 실행
-
-```bash
-xcode-select --install
-```
 
 설치 확인:
 
@@ -27,14 +22,161 @@ git --version
 2. "Sign up" → 학교 이메일로 가입
 3. 이메일 인증
 
-## 3단계: 로컬 연결 (1분)
+### 3단계: Python 설치
 
-> VSCode 통합 터미널(Ctrl+`), CMD, PowerShell 중 어디서든 실행 가능. VSCode 통합 터미널 권장.
+1. https://www.python.org/downloads/ 에서 **Python 3.12** 이상 다운로드
+2. 설치 프로그램 실행
+3. **⚠️ 첫 화면에서 반드시 "Add python.exe to PATH" 체크** ← 가장 중요!
+4. **"Install Now"** 클릭
+
+설치 확인 (Windows: `Win+R` → `cmd` 입력 → 확인):
+
+```bash
+python --version
+```
+
+### 4단계: VSCode 설치
+
+1. https://code.visualstudio.com/ 에서 다운로드 후 설치
+2. 설치 시 **"Add to PATH" 옵션 체크** 권장
+3. 설치 후 실행하여 다음 확장(Extensions)을 설치:
+   - **Python** (Microsoft) — Python 개발 지원
+   - **Jupyter** (Microsoft) — 노트북(.ipynb) 실행 지원
+
+> 좌측 사이드바 확장 아이콘(□) 클릭 → 검색창에 "Python", "Jupyter" 입력 → Install
+
+
+`Python 3.x.x`가 출력되면 성공입니다. 만약 `'python' is not recognized...` 오류가 나면 PATH 등록이 안 된 것이므로 Python을 제거 후 3번을 확인하며 재설치하세요.
+
+## 5단계: 로컬 연결 (1분)
+
+>  VSCode 통합 터미널 권장.
 
 ```bash
 git config --global user.name "홍길동"
 git config --global user.email "학교이메일@ac.kr"
 ```
+
+
+### 6단계: 저장소 클론
+
+명령 프롬프트 열기 (Windows: `Win+R` → `cmd` 입력 → 확인):
+
+```bash
+cd C:\
+git clone https://github.com/LeeSeogMin/planing.git
+```
+
+`C:\planing` 폴더가 생성되면 성공입니다.
+
+### 7단계: VSCode에서 프로젝트 열기
+
+> **반드시 4단계(가상환경 설정)가 "설정 완료!" 메시지로 끝난 뒤 진행하세요.**
+
+1. VSCode 실행
+2. **파일 → 폴더 열기** (`Ctrl+K, Ctrl+O`) → `C:\planing` 선택
+3. 왼쪽 탐색기에서 `ch01` → `ch01.ipynb` 클릭
+
+### 6단계: 커널 선택 및 실행
+
+1. 노트북 우측 상단 **"커널 선택"** 클릭 후, 확장선택 후, 파이썬 환경 선택
+2. **"Python 환경..."** → **"Python 3"** 선택
+3. 첫 번째 코드 셀부터 순차 실행 (▶)
+
+> 커널 목록에 "AI 기획 강의 (Python 3)"가 안 보이면 4단계(`python setup_env.py`)가 정상 완료되었는지 확인하세요.
+
+### 4단계: 환경 자동 설정
+vscode를 열고 터미널-새터미널 열고 실행
+
+```powershell
+python setup_env.py
+```
+
+이 스크립트가 자동으로 처리하는 항목:
+- `.venv` 가상환경 생성
+- 필요한 패키지 일괄 설치
+- Jupyter 커널 등록
+
+"설정 완료!" 메시지가 나오면 성공입니다.
+
+
+
+---
+
+## 📦 주요 의존성
+
+### 기본 라이브러리
+
+- **Python 3.10+**
+- `numpy`, `pandas` - 데이터 분석
+- `matplotlib`, `plotly` - 시각화
+- `scipy` - 통계 분석
+- `networkx` - 네트워크 분석
+
+### 공간정보 분석 (ch02, ch07-1, ch07-2, ch12, ch13)
+
+- `geopandas` - 공간 데이터 처리
+- `rasterio`, `earthengine-api` - 위성영상 분석
+- `pystac-client` - STAC API 검색
+- `leafmap`, `localtileserver` - 지도 시각화
+
+### AI/머신러닝 (ch07-1, ch07-2, ch16)
+
+- `openai`, `anthropic` - LLM API
+- `langchain` - AI 에이전트 프레임워크
+- `chromadb` - 벡터 데이터베이스 (RAG)
+- `ultralytics` - YOLO 객체 탐지
+- `segment-anything` - SAM 모델
+
+### 통계/시뮬레이션 (ch08, ch09, ch11, ch13)
+
+- `pymc` - 베이지안 추론
+- `dowhy` - 인과추론
+- `scikit-learn` - 머신러닝
+
+### 네트워크/시스템 (ch06, ch07-2)
+
+- `networkx` - 네트워크 분석
+- `simpy` - 이산사건 시뮬레이션
+
+---
+만일 github copilot 실패햇을때 아래를 사용합니다. 
+
+## Gemini CLI 설치 및 실행
+
+### 1단계: Node.js 설치 확인
+- Gemini CLI는 npm 방식 설치를 권장하므로 Node.js 필수
+- https://nodejs.org 에서 LTS 버전 다운로드 후 설치
+- npm은 Node.js와 함께 자동 설치됨
+
+### 2단계: vscode 에서 새터미널 열기
+- PowerShell 실행
+
+### 3단계: Gemini CLI 설치
+```bash
+npm install -g @google/gemini-cli 
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned 
+```
+
+### 4단계: 실행
+```bash
+gemini   
+
+중간에 브라우저에서 구글로 로그인하는 과정을 거치니 브라우저를 잘 살핀다. 
+
+구글로그인 후에 성공했다는 메시지와 함께 r 을 입력하라는 메시지가 나오니 따라서 하면 잠시 후에 로그인된다. 
+
+터미널에서 마우스 우클릭 후 패널위치를 오른쪽으로 한다. 
+```
+
+### 5단계: 인증 설정
+처음 실행 시 다음 중 선택:
+- **Google 계정 로그인** (권장)
+- **Gemini API Key**
+- **Vertex AI**
+
+
 
 
 # GitHub Copilot 대학생 무료 사용 방법
@@ -176,148 +318,3 @@ GitHub는 **Copilot Free** (제한된 무료 플랜)와 **Copilot Pro** (고급 
 - **도구/에이전트/모델 조합**: 작업 목적에 따라 자유롭게 조합하여 활용
 
 ---
-
-
-## 🚀 시작하기
-
-### 1단계: VSCode 설치
-
-1. https://code.visualstudio.com/ 에서 다운로드 후 설치
-2. 설치 시 **"Add to PATH" 옵션 체크** 권장
-3. 설치 후 실행하여 다음 확장(Extensions)을 설치:
-   - **Python** (Microsoft) — Python 개발 지원
-   - **Jupyter** (Microsoft) — 노트북(.ipynb) 실행 지원
-
-> 좌측 사이드바 확장 아이콘(□) 클릭 → 검색창에 "Python", "Jupyter" 입력 → Install
-
-### 2단계: Python 설치
-
-1. https://www.python.org/downloads/ 에서 **Python 3.12** 이상 다운로드
-2. 설치 프로그램 실행
-3. **⚠️ 첫 화면에서 반드시 "Add python.exe to PATH" 체크** ← 가장 중요!
-4. **"Install Now"** 클릭
-
-설치 확인 (Windows: `Win+R` → `cmd` 입력 → 확인):
-
-```bash
-python --version
-```
-
-`Python 3.x.x`가 출력되면 성공입니다. 만약 `'python' is not recognized...` 오류가 나면 PATH 등록이 안 된 것이므로 Python을 제거 후 3번을 확인하며 재설치하세요.
-
-### 3단계: 저장소 클론
-
-명령 프롬프트 열기 (Windows: `Win+R` → `cmd` 입력 → 확인):
-
-```bash
-cd C:\
-git clone https://github.com/LeeSeogMin/planing.git
-```
-
-`C:\planing` 폴더가 생성되면 성공입니다.
-
-### 4단계: 환경 자동 설정
-vscode를 열고 터미널-새터미널 열고 실행
-
-```powershell
-python setup_env.py
-```
-
-이 스크립트가 자동으로 처리하는 항목:
-- `.venv` 가상환경 생성
-- 필요한 패키지 일괄 설치
-- Jupyter 커널 등록
-
-"설정 완료!" 메시지가 나오면 성공입니다.
-
-### 5단계: VSCode에서 프로젝트 열기
-
-> **반드시 4단계(가상환경 설정)가 "설정 완료!" 메시지로 끝난 뒤 진행하세요.**
-
-1. VSCode 실행
-2. **파일 → 폴더 열기** (`Ctrl+K, Ctrl+O`) → `C:\planing` 선택
-3. 왼쪽 탐색기에서 `ch01` → `ch01.ipynb` 클릭
-
-### 6단계: 커널 선택 및 실행
-
-1. 노트북 우측 상단 **"커널 선택"** 클릭 후, 확장선택 후, 파이썬 환경 선택
-2. **"Python 환경..."** → **"Python 3"** 선택
-3. 첫 번째 코드 셀부터 순차 실행 (▶)
-
-> 커널 목록에 "AI 기획 강의 (Python 3)"가 안 보이면 4단계(`python setup_env.py`)가 정상 완료되었는지 확인하세요.
-
----
-
-## 📦 주요 의존성
-
-### 기본 라이브러리
-
-- **Python 3.10+**
-- `numpy`, `pandas` - 데이터 분석
-- `matplotlib`, `plotly` - 시각화
-- `scipy` - 통계 분석
-- `networkx` - 네트워크 분석
-
-### 공간정보 분석 (ch02, ch07-1, ch07-2, ch12, ch13)
-
-- `geopandas` - 공간 데이터 처리
-- `rasterio`, `earthengine-api` - 위성영상 분석
-- `pystac-client` - STAC API 검색
-- `leafmap`, `localtileserver` - 지도 시각화
-
-### AI/머신러닝 (ch07-1, ch07-2, ch16)
-
-- `openai`, `anthropic` - LLM API
-- `langchain` - AI 에이전트 프레임워크
-- `chromadb` - 벡터 데이터베이스 (RAG)
-- `ultralytics` - YOLO 객체 탐지
-- `segment-anything` - SAM 모델
-
-### 통계/시뮬레이션 (ch08, ch09, ch11, ch13)
-
-- `pymc` - 베이지안 추론
-- `dowhy` - 인과추론
-- `scikit-learn` - 머신러닝
-
-### 네트워크/시스템 (ch06, ch07-2)
-
-- `networkx` - 네트워크 분석
-- `simpy` - 이산사건 시뮬레이션
-
----
-만일 github copilot 실패햇을때 아래를 사용합니다. 
-
-## Gemini CLI 설치 및 실행
-
-### 1단계: Node.js 설치 확인
-- Gemini CLI는 npm 방식 설치를 권장하므로 Node.js 필수
-- https://nodejs.org 에서 LTS 버전 다운로드 후 설치
-- npm은 Node.js와 함께 자동 설치됨
-
-### 2단계: vscode 에서 새터미널 열기
-- PowerShell 실행
-
-### 3단계: Gemini CLI 설치
-```bash
-npm install -g @google/gemini-cli 
-
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned 
-```
-
-### 4단계: 실행
-```bash
-gemini   
-
-중간에 브라우저에서 구글로 로그인하는 과정을 거치니 브라우저를 잘 살핀다. 
-
-구글로그인 후에 성공했다는 메시지와 함께 r 을 입력하라는 메시지가 나오니 따라서 하면 잠시 후에 로그인된다. 
-
-터미널에서 마우스 우클릭 후 패널위치를 오른쪽으로 한다. 
-```
-
-### 5단계: 인증 설정
-처음 실행 시 다음 중 선택:
-- **Google 계정 로그인** (권장)
-- **Gemini API Key**
-- **Vertex AI**
-
