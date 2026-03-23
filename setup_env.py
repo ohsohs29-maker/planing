@@ -4,7 +4,8 @@
 ========================================================
 
 사용법:
-  python setup_env.py
+  Windows: python setup_env.py
+  macOS/Linux: python3 setup_env.py
 
 기능:
   1. .venv 가상환경 생성 (이미 있으면 건너뜀)
@@ -93,6 +94,7 @@ def register_kernel():
 
 def main():
     py_ver = f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
+    project_dir = Path(__file__).parent.resolve()
 
     print("=" * 56)
     print("  AI 기획 강의 - 실습 환경 자동 설정")
@@ -115,7 +117,7 @@ def main():
     print("  🎉 설정 완료!")
     print("=" * 56)
     print()
-    print("  1. VSCode에서 파일 → 폴더 열기 → C:\\planing 선택")
+    print(f"  1. VSCode에서 파일 → 폴더 열기 → {project_dir} 선택")
     print("  2. ch01/ch01.ipynb 열기")
     print("  3. 우측 상단 [커널 선택] 클릭")
     print(f'  4. "{KERNEL_DISPLAY}" 선택')

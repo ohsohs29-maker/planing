@@ -120,10 +120,16 @@ ch**/
 3. **⚠️ 첫 화면에서 반드시 "Add python.exe to PATH" 체크** ← 가장 중요!
 4. **"Install Now"** 클릭
 
-설치 확인 (Windows: `Win+R` → `cmd` 입력 → 확인):
+설치 확인:
 
 ```bash
 python --version
+```
+
+macOS/Linux에서 `python`이 없다면 다음으로 확인하세요:
+
+```bash
+python3 --version
 ```
 
 `Python 3.x.x`가 출력되면 성공입니다. 만약 `'python' is not recognized...` 오류가 나면 PATH 등록이 안 된 것이므로 Python을 제거 후 3번을 확인하며 재설치하세요.
@@ -138,7 +144,8 @@ cd planing
 ### 3단계: 환경 자동 설정
 
 ```bash
-python setup_env.py
+python setup_env.py     # Windows
+python3 setup_env.py    # macOS/Linux
 ```
 
 이 스크립트가 자동으로 처리하는 항목:

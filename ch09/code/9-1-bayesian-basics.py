@@ -9,10 +9,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from matplotlib import font_manager, rc
 
-# 한글 폰트 설정 (macOS)
-plt.rcParams['font.family'] = 'AppleGothic'
+# 한글 폰트 설정 (크로스플랫폼)
+plt.rcParams['font.family'] = ['AppleGothic', 'Malgun Gothic', 'NanumGothic', 'DejaVu Sans', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
 def bayes_theorem(prior, likelihood, false_positive_rate):

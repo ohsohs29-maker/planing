@@ -12,8 +12,8 @@ import matplotlib.patches as mpatches
 import warnings
 warnings.filterwarnings('ignore')
 
-# 한글 폰트 설정
-plt.rcParams['font.family'] = 'AppleGothic'
+# 한글 폰트 설정 (크로스플랫폼)
+plt.rcParams['font.family'] = ['AppleGothic', 'Malgun Gothic', 'NanumGothic', 'DejaVu Sans', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
 

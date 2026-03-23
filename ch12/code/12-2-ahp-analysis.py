@@ -7,16 +7,9 @@ Saaty의 AHP 기법을 구현하여 다기준 의사결정을 수행한다.
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib import font_manager, rc
-import platform
 
-# 한글 폰트 설정
-if platform.system() == 'Darwin':
-    rc('font', family='AppleGothic')
-elif platform.system() == 'Windows':
-    font_path = "c:/Windows/Fonts/malgun.ttf"
-    font_name = font_manager.FontProperties(fname=font_path).get_name()
-    rc('font', family=font_name)
+# 한글 폰트 설정 (크로스플랫폼)
+plt.rcParams['font.family'] = ['AppleGothic', 'Malgun Gothic', 'NanumGothic', 'DejaVu Sans', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
 print("=" * 60)
