@@ -1,25 +1,14 @@
-# Chapter 5: 인과추론 기초 (Causal Inference Basics)
-#
-# 설치 방법:
-# pip install -r requirements.txt
-#
-# 주의:
-# - 5.7 Causal Forests 실습은 econml 라이브러리를 사용합니다.
-# - econml 설치에는 시간이 걸릴 수 있습니다 (의존성 많음).
+# 제6장 시스템 다이내믹스 실습 환경
 
-# 기본 라이브러리
-numpy>=1.26.0
-pandas>=2.1.0
-scikit-learn>=1.4.0
-matplotlib>=3.8.0
+# 핵심 라이브러리
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+networkx>=3.0
 
-# 인과추론 라이브러리 (5.1-5.6절)
-dowhy>=0.11.1
-networkx>=3.2.0
+# 시스템 다이내믹스 (선택)
+# pysd>=3.0.0  # Vensim/XMILE 모델 실행
+# Note: PySD는 추가 의존성이 많아 순수 Python 구현으로 대체 가능
 
-# 인과 머신러닝 (5.7절: Causal Forests)
-econml>=0.15.0  # CausalForestDML 포함
-
-# Optional (확장 실습)
-causalml>=0.15.0  # Alternative Causal ML library
-shap>=0.45.0  # Feature importance for Causal Forests
+# 시각화 보조
+seaborn>=0.12
