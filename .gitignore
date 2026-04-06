@@ -9,6 +9,8 @@ env/
 ENV/
 .claude/
 tools/
+docs/
+
 
 
 # Python cache
