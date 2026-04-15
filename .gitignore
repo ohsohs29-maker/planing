@@ -10,7 +10,7 @@ ENV/
 .claude/
 tools/
 docs/
-
+exam/answer/
 
 
 # Python cache
