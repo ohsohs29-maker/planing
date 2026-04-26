@@ -1,11 +1,11 @@
 """
-7장 실습: U-Net 기반 토지피복 세그멘테이션
+6주차 보충자료: U-Net 기반 토지피복 세그멘테이션
 
 이 스크립트는 Sentinel-2 다중 스펙트럼 영상을 사용하여
 토지피복 세그멘테이션 파이프라인을 구현한다.
 
 실행 방법:
-    python 7-5-unet-landcover-segmentation.py --data_dir ../data --epochs 50
+    python 6-supplement-unet-landcover-segmentation.py --data_dir ../data --epochs 50
 
 필요 환경:
     pip install -r requirements.txt
@@ -516,7 +516,7 @@ def main():
 
     # 결과 출력
     print('\n' + '=' * 60)
-    print('7장 실습 완료: U-Net 기반 토지피복 세그멘테이션')
+    print('6주차 보충자료 완료: U-Net 기반 토지피복 세그멘테이션')
     print('=' * 60)
     print(f'  모델: U-Net + ResNet-50 백본')
     print(f'  입력: {args.num_bands}채널 다중 스펙트럼 영상')
